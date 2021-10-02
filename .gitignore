@@ -72,3 +72,6 @@ Crowd/Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 Crowd/DerivedDataCache/*
+
+# Rider
+Crowd/.idea
