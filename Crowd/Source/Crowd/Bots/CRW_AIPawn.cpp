@@ -3,6 +3,7 @@
 
 #include "CRW_AIPawn.h"
 
+int32 ACRW_AIPawn::s_HelperIndex_AIPawn = 0;
 
 // Sets default values
 ACRW_AIPawn::ACRW_AIPawn()
@@ -37,3 +38,17 @@ AActor* ACRW_AIPawn::GetOwnerForInterface()
 	return result;
 }
 
+void ACRW_AIPawn::IncrementHelperIndex()
+{
+	s_HelperIndex_AIPawn++;
+}
+
+void ACRW_AIPawn::ResetHelperIndex()
+{
+	s_HelperIndex_AIPawn = 0;
+}
+
+int32 ACRW_AIPawn::GetHelperIndex()
+{
+	return s_HelperIndex_AIPawn;
+}

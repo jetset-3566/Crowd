@@ -37,8 +37,17 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void StartChaseCurrentTarget();
 
+	void SetCommonInfo(const FText& Text, int32 INT32);
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BitMask, BitMaskEnum = "EBotState"))
 	int32 BotState;
+	UPROPERTY(BlueprintReadOnly, Category = "Setting")
+	FText Info;
+	UPROPERTY(BlueprintReadOnly, Category = "Setting")
+	int32 CurrentHelperIndex = -1;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateCommonInfo();
 	
 private:	
 	UPROPERTY()

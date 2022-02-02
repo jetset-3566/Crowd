@@ -3,6 +3,7 @@
 
 #include "CRW_AICharacter.h"
 
+int32 ACRW_AICharacter::s_HelperIndex_AICharacter = 0;
 
 // Sets default values
 ACRW_AICharacter::ACRW_AICharacter()
@@ -35,5 +36,20 @@ AActor* ACRW_AICharacter::GetOwnerForInterface()
 	AActor* result =  Cast<AActor>(this);
 	
 	return result;
+}
+
+void ACRW_AICharacter::IncrementHelperIndex()
+{
+	s_HelperIndex_AICharacter++;
+}
+
+void ACRW_AICharacter::ResetHelperIndex()
+{
+	s_HelperIndex_AICharacter = 0;
+}
+
+int32 ACRW_AICharacter::GetHelperIndex()
+{
+	return s_HelperIndex_AICharacter;
 }
 

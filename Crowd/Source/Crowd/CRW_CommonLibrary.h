@@ -13,6 +13,26 @@ enum class EBotState :uint8
 };
 ENUM_CLASS_FLAGS(EBotState);
 
+USTRUCT(BlueprintType)
+struct FSpawnSetting
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	FName Name = "None";
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	TSubclassOf<class AActor> Class = nullptr;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	int32 NumberOfUnit = 1;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	int32 NumberOfRow = 1;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	bool bIsSpawnToRight = false;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
+	AActor* TargetOfChase = nullptr;
+	
+};
+
 UCLASS()
 class CROWD_API UCRW_CommonLibrary : public UBlueprintFunctionLibrary
 {

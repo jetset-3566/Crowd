@@ -3,6 +3,13 @@
 
 #include "CRW_IBot.h"
 
+void ICRW_IBot::SetCommonInfo_Implementation(const FText& newInfo, const int32 CurrentHelperIndex)
+{
+	UCRW_HelperBot* myHelperBot = GetHelperBotFromOwner();
+	if (myHelperBot)
+		myHelperBot->SetCommonInfo(newInfo, CurrentHelperIndex);
+}
+
 void ICRW_IBot::ShowDebugInfo_Implementation(bool bIsShow)
 {
 	UCRW_HelperBot* myHelperBot = GetHelperBotFromOwner();

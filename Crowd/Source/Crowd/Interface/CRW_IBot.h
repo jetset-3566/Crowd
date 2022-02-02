@@ -25,12 +25,11 @@ class CROWD_API ICRW_IBot
 	GENERATED_BODY()
 	
 public:
-	//virtual void SetCommonInfo(FText newtExt);
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	FText GetCommonInfo();
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void SetCommonInfo(const FText &newInfo);
-
+	void SetCommonInfo(const FText &newInfo, const int32 CurrentHelperIndex);
+		void SetCommonInfo_Implementation(const FText &newInfo, const int32 CurrentHelperIndex);
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void ShowDebugInfo(bool bIsShow);
 		void ShowDebugInfo_Implementation(bool bIsShow);
@@ -51,4 +50,8 @@ public:
 	virtual AActor* GetOwnerForInterface();
 
 	UCRW_HelperBot* GetHelperBotFromOwner();
+
+	virtual void IncrementHelperIndex(){	}
+	virtual void ResetHelperIndex(){	}
+	virtual int32 GetHelperIndex(){return -1;}
 };

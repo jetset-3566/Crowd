@@ -28,6 +28,13 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//Bots interface Start
-	virtual AActor* GetOwnerForInterface() override;
+	AActor* GetOwnerForInterface() override;
+
+	void IncrementHelperIndex() override;
+	void ResetHelperIndex() override;
+	int32 GetHelperIndex() override;
 	//Bots interface End
+
+private:
+	static int32 s_HelperIndex_AICharacter;
 };

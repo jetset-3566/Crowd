@@ -3,7 +3,6 @@
 
 #include "CRW_HelperBot.h"
 
-
 // Sets default values for this component's properties
 UCRW_HelperBot::UCRW_HelperBot()
 {
@@ -21,7 +20,6 @@ void UCRW_HelperBot::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
 }
 
 
@@ -41,5 +39,13 @@ AActor* UCRW_HelperBot::GetCurrentTarget() const
 void UCRW_HelperBot::SetCurrentTarget(AActor* newTarget)
 {
 	AICurrentTarget = newTarget;
+}
+
+void UCRW_HelperBot::SetCommonInfo(const FText& NewInfo, int32 newIndex)
+{
+	Info = NewInfo;
+	CurrentHelperIndex = newIndex;
+
+	UpdateCommonInfo();
 }
 
