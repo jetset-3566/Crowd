@@ -41,8 +41,8 @@ public:
 	void SetChaseTarget(AActor* Target);
 		void SetChaseTarget_Implementation(AActor* Target);
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void TryStartChaseCurrentTarget();
-		void TryStartChaseCurrentTarget_Implementation();
+	void ChangeChaseStateCurrentTarget();
+		void ChangeChaseStateCurrentTarget_Implementation();
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	AActor* GetTarget();
 		AActor* GetTarget_Implementation();

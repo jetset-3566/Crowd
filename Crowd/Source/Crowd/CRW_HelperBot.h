@@ -35,7 +35,7 @@ public:
 	void SetCurrentTarget(AActor* newTarget);
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void StartChaseCurrentTarget();
+	void ChangeChaseStateCurrentTarget();
 
 	void SetCommonInfo(const FText& Text, int32 INT32);
 

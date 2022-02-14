@@ -18,19 +18,21 @@ struct FSpawnSetting
 {
 	GENERATED_BODY()
 
+	//The group name is used to indicate the unique identifier of the group
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	FName Name = "None";
+	//Class for choosing what this button should Spawn
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	TSubclassOf<class AActor> Class = nullptr;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	int32 NumberOfUnit = 1;
+	//Number of rows for the group. number of columns = NumberOfUnit/NumberOfRow
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	int32 NumberOfRow = 1;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	bool bIsSpawnToRight = false;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SpawnSetting")
 	AActor* TargetOfChase = nullptr;
-	
 };
 
 UCLASS()

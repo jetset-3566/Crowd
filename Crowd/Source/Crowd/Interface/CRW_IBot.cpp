@@ -30,10 +30,10 @@ void ICRW_IBot::SetChaseTarget_Implementation(AActor* Target)
 		GetHelperBotFromOwner()->SetCurrentTarget(Target);
 }
 
-void ICRW_IBot::TryStartChaseCurrentTarget_Implementation()
+void ICRW_IBot::ChangeChaseStateCurrentTarget_Implementation()
 {
 	if (GetHelperBotFromOwner())
-		GetHelperBotFromOwner()->StartChaseCurrentTarget();
+		GetHelperBotFromOwner()->ChangeChaseStateCurrentTarget();
 }
 
 AActor* ICRW_IBot::GetTarget_Implementation()
