@@ -7,21 +7,23 @@
 #include "GameFramework/Actor.h"
 #include "CRW_SpawnPoint.generated.h"
 
+/*
+ *this is a class for performing the functions of spawn
+ *groups of bots with its own unique index which is taken
+ *from the static variable of the main classes of bots
+ */
 UCLASS()
 class CROWD_API ACRW_SpawnPoint : public AActor
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
 	ACRW_SpawnPoint();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 public:
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Setting | Bots")

@@ -6,22 +6,21 @@
 #include "Components/ActorComponent.h"
 #include "CRW_HelperBot.generated.h"
 
-
+/*
+ * this is a helper class for general command and debugging information, implemented in bots
+ */
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class CROWD_API UCRW_HelperBot : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this component's properties
 	UCRW_HelperBot();
 
 protected:
-	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:
-	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
 	UFUNCTION(BlueprintImplementableEvent)

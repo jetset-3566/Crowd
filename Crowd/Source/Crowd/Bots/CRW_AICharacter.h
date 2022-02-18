@@ -13,18 +13,14 @@ class CROWD_API ACRW_AICharacter : public ACharacter, public ICRW_IBot
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	ACRW_AICharacter();
+	// ObjectInitializer need for change class of skeletal mesh for budge allocator
+	ACRW_AICharacter(const FObjectInitializer &ObjectInitializer);
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//Bots interface Start
