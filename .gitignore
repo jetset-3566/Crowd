@@ -47,8 +47,8 @@ Crowd/SourceArt/**/*.tga
 
 # Binary Files
 Crowd/Binaries/*
-Crowd/Plugins/*/Binaries/*
-
+Crowd/Plugins/Binaries/*
+Crowd/Plugins/Intermediate/*
 # Builds
 Crowd/Build/*
 
@@ -75,3 +75,5 @@ Crowd/DerivedDataCache/*
 
 # Rider
 Crowd/.idea
+/Crowd/Plugins/VertexAnimToolset/Binaries/Win64/*.pdb
+/Crowd/Plugins/VertexAnimToolset/Binaries/Win64/*.modules
